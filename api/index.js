@@ -52,7 +52,7 @@ app.get("/total", (req, res) => {
 app.use(auth());
 // 👇 private routes below 👇
 
-app.get("/reports", requiredScope('read:reports'), (req, res) => {
+app.get("/reports", requiredScopes('read:reports'), (req, res) => {
   res.send(expenses);
 });
 
